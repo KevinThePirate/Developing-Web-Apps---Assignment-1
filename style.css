@@ -31,6 +31,12 @@ input[type="submit"]{
 .error{
     background-color: red !important;
 }
+#checkbox-area{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 #genre-area{
     width: 75%;
     display: grid;
@@ -40,9 +46,10 @@ input[type="submit"]{
 }
 #test{
     grid-area: title;
+    margin-bottom: 10px;
 }
 #genreFirst, #genreSecond{
-    width: 100%;
+    width: 200px;
     height: 170px;
     border: 5px solid white;
     grid-row-start: 2;
@@ -53,4 +60,36 @@ input[type="submit"]{
 }
 #genreSecond{
     grid-area: second;
+}
+.verify-image{
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    margin: 5px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#one{
+  background-image: url('images/1.gif');  
+}
+#two{
+    background-image: url('images/2.gif');  
+  }
+#three{
+  background-image: url('images/3.gif');  
+}
+#four{
+    background-image: url('images/4.gif');  
+  }
+.invalid{
+      opacity: 0.5;
+  }
+.error-message{
+    background-color: red;
+    padding: 10px;
+    opacity: 1;
+    user-select: none;
+    position: absolute;
+    right: 10%;
 }

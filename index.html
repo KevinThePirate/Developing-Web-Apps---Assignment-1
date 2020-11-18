@@ -24,6 +24,7 @@
           placeholder="Firstname Secondname"
           value=""
         />
+        <label for="name" class="error-message">Error</label>
       </div>
       <div id="email-area">
         <label for="email">Email:</label>
@@ -35,23 +36,35 @@
           placeholder="example@email.com"
           value=""
         />
+        <label for="email" class="error-message">Error</label>
       </div>
         <div id="checkbox-area">
           
             <label for='checkbox'>Do You Agree To Share Your Data:</label>
             <input class="checkbox" type="checkbox" id="field-3" name="okay">
+            <label for="checkbox" class="error-message">Error</label>
 
         </div>
         <div id="genre-area">
-        <h1 id="test">Your Favourite Music Genre</h1>
+        <h1 id="genre-title">Your Favourite Music Genre</h1> <label for="genres" class="error-message">Error</label>
         <div id="genreFirst">
 
         </div>
         <div id="genreSecond" name='genres'>
 
         </div>
+        
       </div>
-        <input type="submit"/>
+
+      <div id="image-check-area">
+        <div><h3 name='captcha' id="image-title">Click on Number <span id="find"></span></h3> <label for="captcha" class="error-message">Error</label></div>
+        <div class="verify-image" id="one" value='1'></div>
+        <div class="verify-image" id="two" value='2'></div>
+        <div class="verify-image" id="three" value='3'></div>
+        <div class="verify-image" id="four" value='4'></div>
+      </div>
+
+        <input type="button" id="submit-button">Submit</input>
     </form>
 </body>
 </html>
