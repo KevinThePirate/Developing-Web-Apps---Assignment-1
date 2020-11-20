@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gimme Yo Data!</title>
+    <title>Data Collection 9000!</title>
     <link rel='stylesheet' href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <h1 id="test">Personal Data</h1>
+    <h1>Personal Data</h1>
     <form
       action="https://webdevcit.com/displayvalues.php"
       method="post"
@@ -17,7 +17,7 @@
       <div id="name-area">
         <label for="name">Name:</label>
         <input
-          class="yoke"
+          class="text-put"
           type="text"
           name="name"
           id="field-1"
@@ -29,10 +29,9 @@
       <div id="email-area">
         <label for="email">Email:</label>
         <input
-          class="yoke"
+          class="text-put"
           type="text"
-          name="email"
-          id="field-2"
+          name="email"id="field-2"
           placeholder="example@email.com"
           value=""
         />
@@ -40,7 +39,7 @@
       </div>
         <div id="checkbox-area">
           
-            <label for='checkbox'>Do You Agree To Share Your Data:</label>
+            <label for='okay'>Do You Agree To Share Your Data:</label>
             <input class="checkbox" type="checkbox" id="field-3" name="okay">
             <label for="checkbox" class="error-message">Error</label>
 
@@ -75,7 +74,7 @@
     </div>
       </div>
 
-        <input type="button" id="submit-button">Submit</input>
+        <input type="button" id="submit-button" value="Submit"></input>
     </form>
 </body>
 </html>

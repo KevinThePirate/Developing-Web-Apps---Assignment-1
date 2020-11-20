@@ -1,135 +1,128 @@
-*{
-    border-radius: 5px;
+* {
+  border-radius: 5px;
 }
-body{
-    background-color: #323232;
-    color: white;
+body {
+  background-color: #323232;
+  color: white;
 }
-h1{
-    text-align: center;
-    font-family: monospace;
+h1 {
+  text-align: center;
+  font-family: monospace;
 }
-form{
-    font-family: sans-serif;
-    margin: auto;
-    width: 50%;
-    color: white;
-    text-align: center;
+form {
+  font-family: sans-serif;
+  margin: auto;
+  width: 50%;
+  color: white;
+  text-align: center;
 }
-form > *{
-    margin: auto;
-    width: 100%;
+form > * {
+  margin: auto;
+  width: 100%;
 }
-input[type="text"]{
-    color: white;
-    border: 0;
-    background-color: #323232;
-    height: 50px;
-    border-bottom: 5px solid white;
+input[type="text"] {
+  color: white;
+  border: 0;
+  background-color: #323232;
+  height: 50px;
+  border-bottom: 5px solid white;
 }
-input[type="submit"]{
-    margin: auto;
-    width: 25%;
+input[type="button"] {
+  margin: auto;
+  width: 25%;
+  background-color: #323232;
+  height: 50px;
+  border: 0;
+  border: 5px solid white;
+  color: white;
 }
-.error{
-    background-color: red !important;
+.error {
+  background-color: red !important;
 }
-#checkbox-area{
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#genre-area{
-    width: 75%;
-    display: flex;
+#checkbox-area {
+  height: 50px;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
-#test{
-    grid-area: title;
-    margin-bottom: 10px;
+#genre-area {
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-#genreFirst, #genreSecond{
-    width: 200px;
-    height: 170px;
-    border: 5px solid white;
-    grid-row-start: 2;
-    margin: 5px;
+#genreFirst,
+#genreSecond {
+  width: 200px;
+  height: 170px;
+  border: 5px solid white;
+  margin: 5px;
 }
-#genreFirst{
-    grid-area: first;
-}
-#genreSecond{
-    grid-area: second;
-}
-#selection-area{
+#selection-area {
   position: relative;
   top: -115px;
 }
-.verify-image, .overlay{
-    width: 100px;
-    height: 100px;
-    display: inline-block;
-    margin: 5px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
+.verify-image,
+.overlay {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  margin: 5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-.overlay{
-  border: 1px solid black;
+.overlay {
   position: relative;
   top: 115px;
   background-color: #323232;
   opacity: 0;
   pointer-events: none;
 }
-#one{
-  background-image: url('images/1.gif');  
+#one {
+  background-image: url("images/1.gif");
 }
-#two{
-    background-image: url('images/2.gif');  
-  }
-#three{
-  background-image: url('images/3.gif');  
+#two {
+  background-image: url("images/2.gif");
 }
-#four{
-    background-image: url('images/4.gif');  
-  }
-.invalid{
-      opacity: 0.5;
-  }
-.error-message{
-    background-color: red;
-    padding: 10px;
-    opacity: 0;
-    user-select: none;
-    position: absolute;
-    right: 10%;
-    -webkit-animation: scale-up-center 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s infinite alternate both;
-	        animation: scale-up-center 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s infinite alternate both;
+#three {
+  background-image: url("images/3.gif");
 }
-.scale-up-center {
-	-webkit-animation: scale-up-center 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s infinite alternate both;
-	        animation: scale-up-center 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s infinite alternate both;
+#four {
+  background-image: url("images/4.gif");
+}
+.invalid {
+  opacity: 0.5;
+}
+.error-message {
+  background-color: red;
+  padding: 10px;
+  opacity: 0;
+  user-select: none;
+  position: absolute;
+  right: 10%;
+  -webkit-animation: scale-up-center 3s cubic-bezier(0.39, 0.575, 0.565, 1) 1s
+    infinite alternate both;
+  animation: scale-up-center 3s cubic-bezier(0.39, 0.575, 0.565, 1) 1s infinite
+    alternate both;
 }
 @-webkit-keyframes scale-up-center {
-    0% {
-      -webkit-transform: scale(0.5);
-              transform: scale(0.5);
-    }
-    100% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-    }
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
   }
-  @keyframes scale-up-center {
-    0% {
-      -webkit-transform: scale(0.5);
-              transform: scale(0.5);
-    }
-    100% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-    }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
   }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
