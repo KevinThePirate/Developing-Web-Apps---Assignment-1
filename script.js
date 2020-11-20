@@ -133,16 +133,30 @@ const generateGenres = () => {
 }
 const imageCheck = (element) => {
   const number = element.getAttribute('value');
+  const overlays = document.querySelectorAll('.overlay')
+  let imageArray = Array.apply(null, images)
+  const place = imageArray.indexOf(element)
   document.getElementById('find').innerHTML = find;
+  if(overlays[place].classList.contains('clicked')){
+    console.log(overlays[place].classList)
+    overlays[place].classList.remove('clicked')
+    console.log(overlays[place].classList)
+    for (let i = 0; i < overlays.length; i++) {
+      overlays[i].classList.remove('invalid')
+    }
+  }else{
+    for (let i = 0; i < overlays.length; i++) {
+      overlays[i].classList.add('invalid') 
+    }
+    overlays[place].classList.add('clicked')
+  }
   if(number == find){
     correctImage = true;
   }else{
     correctImage = false;
   }
-  for (let i = 0; i < images.length; i++) {
-    images[i].classList.add('invalid') 
-  }
-  element.classList.remove('invalid');
+  
+  overlays[place].classList.remove('invalid');
   console.log(correctImage)
   }
 
@@ -160,7 +174,5 @@ const submit = () => {
   location = url;
   }
 }
-
-
 
 init();

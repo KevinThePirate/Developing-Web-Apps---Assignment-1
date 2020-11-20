@@ -63,7 +63,11 @@ input[type="submit"]{
 #genreSecond{
     grid-area: second;
 }
-.verify-image{
+#selection-area{
+  position: relative;
+  top: -115px;
+}
+.verify-image, .overlay{
     width: 100px;
     height: 100px;
     display: inline-block;
@@ -71,6 +75,14 @@ input[type="submit"]{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+}
+.overlay{
+  border: 1px solid black;
+  position: relative;
+  top: 115px;
+  background-color: #323232;
+  opacity: 0;
+  pointer-events: none;
 }
 #one{
   background-image: url('images/1.gif');  
