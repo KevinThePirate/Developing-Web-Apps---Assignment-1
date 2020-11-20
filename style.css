@@ -1,3 +1,6 @@
+*{
+    border-radius: 5px;
+}
 body{
     background-color: #323232;
     color: white;
@@ -39,10 +42,9 @@ input[type="submit"]{
 }
 #genre-area{
     width: 75%;
-    display: grid;
-    grid-column-gap: 20px;
-    grid-template-areas: 'title title'
-                          'first second';
+    display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #test{
     grid-area: title;
@@ -88,8 +90,34 @@ input[type="submit"]{
 .error-message{
     background-color: red;
     padding: 10px;
-    opacity: 1;
+    opacity: 0;
     user-select: none;
     position: absolute;
     right: 10%;
+    -webkit-animation: scale-up-center 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s infinite alternate both;
+	        animation: scale-up-center 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s infinite alternate both;
 }
+.scale-up-center {
+	-webkit-animation: scale-up-center 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s infinite alternate both;
+	        animation: scale-up-center 3s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s infinite alternate both;
+}
+@-webkit-keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes scale-up-center {
+    0% {
+      -webkit-transform: scale(0.5);
+              transform: scale(0.5);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }

@@ -25,22 +25,29 @@ const init = () => {
 }
 const validate = (e) => {
   valid = true;
-  //ALWAYS SELECTING FIRST LABEL
+
   let inputs = document.querySelectorAll(".yoke");
-  if(document.getElementById('field-3').checked == true){checkDoesPass = true;}
+  if(document.getElementById('field-3').checked == true){checkDoesPass = true;}else{checkDoesPass = false;}
 
 const revealError = (box, errorMessage) =>{
   let errorBox = box.nextElementSibling;
   errorBox.style.opacity = 1;
   errorBox.innerHTML = errorMessage;
 }
+let errorBoxes = document.querySelectorAll('.error-message');
+errorBoxes.forEach(element => {
+  element.style.opacity = 0;
+})
+
+
 
   inputs.forEach((element) => {
-    var str = document.getElementById('field-2').value;
+  var str = document.getElementById('field-2').value;
   var patt = new RegExp(/.+\@.+\..+/);
   var res = patt.test(str);
 
     element.classList.remove("error");
+    document.getElementById("genreSecond").classList.remove("error");
 
     if (element.value == "") {
       revealError(element, 'Error!')
@@ -61,6 +68,7 @@ const revealError = (box, errorMessage) =>{
     if(movedGenres.length == 0){
       console.log('Error at', {element})
       revealError(document.getElementById("genre-title"), 'Please Select!')
+      document.getElementById("genreSecond").classList.add("error");
       valid = false;
     }
     if(correctImage == false){
@@ -95,8 +103,6 @@ const moveGenre = (element) =>{
   genres.sort();
   movedGenres.sort();
   generateGenres();
-
-
 }
 const generateGenres = () => {
   document.getElementById("genreFirst").innerHTML = '';
